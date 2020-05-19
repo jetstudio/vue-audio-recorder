@@ -1,9 +1,8 @@
 <style lang="scss">
   .ar {
     width: 420px;
-    font-family: 'Roboto', sans-serif;
     border-radius: 16px;
-    background-color: #FAFAFA;
+    background-color: #333333;
     box-shadow: 0 4px 18px 0 rgba(0,0,0,0.17);
     position: relative;
     box-sizing: content-box;
@@ -20,6 +19,7 @@
       padding-top: 1px;
       overflow-y: auto;
       margin-bottom: 20px;
+      cursor: pointer;
 
       &__record {
         width: 320px;
@@ -29,13 +29,12 @@
         line-height: 45px;
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid #E8E8E8;
         position: relative;
+        background: #333333;
 
         &--selected {
-          border: 1px solid #E8E8E8;
           border-radius: 24px;
-          background-color: #FFFFFF;
+          background-color: #555555;
           margin-top: -1px;
           padding: 0 34px;
         }
@@ -114,7 +113,6 @@
     }
 
     &__text {
-      color: rgba(84,84,84,0.5);
       font-size: 16px;
     }
 
@@ -158,7 +156,7 @@
       left: 10px;
       bottom: 0;
       top: 0;
-      color: rgb(244, 120, 90);
+      color: #ffffff;
     }
 
     &__downloader,

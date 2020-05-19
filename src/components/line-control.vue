@@ -8,8 +8,8 @@
     &__head {
       position: absolute;
       height: inherit;
-      background-color: #616161;
-      border-radius: inherit;
+      background-color: #333;
+      border-radius: 5px;
     }
   }
 </style>

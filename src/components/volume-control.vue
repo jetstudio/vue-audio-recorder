@@ -10,10 +10,11 @@
       background: #E6E6E6;
       border-radius: 4px;
       position: relative;
+      cursor: pointer;
     }
 
     &__icon {
-      fill: #747474;
+      fill: #ffffff;
       width: 24px;
       height: 24px;
       border: 0;

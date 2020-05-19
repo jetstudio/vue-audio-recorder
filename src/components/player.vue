@@ -9,15 +9,15 @@
     align-items: center;
     justify-content: center;
     background-color: unset;
-    font-family: 'Roboto', sans-serif;
 
     & > .ar-player-bar {
-      border: 1px solid #E8E8E8;
       border-radius: 24px;
       margin: 0 0 0 5px;
+      background: #555555;
 
       & > .ar-player__progress {
         width: 125px;
+        cursor: pointer;
       }
     }
 
