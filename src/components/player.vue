@@ -42,7 +42,7 @@
     }
 
     &__time {
-      color: rgba(84,84,84,0.5);
+      color: #ffffff;
       font-size: 16px;
       width: 41px;
     }
@@ -58,7 +58,7 @@
         background-color: #05CBCD !important;
 
         &:hover {
-          fill: #505050 !important;
+          fill: #ffffff !important;
         }
       }
     }
@@ -75,6 +75,7 @@
         class="ar-icon ar-icon__lg ar-player__play"
         :name="playBtnIcon"
         :class="{'ar-player__play--active': isPlaying}"
+        :title="isPlaying ? 'Pause' : 'Play'"
         @click.native="playback"/>
     </div>
 

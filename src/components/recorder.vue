@@ -19,24 +19,30 @@
       padding-top: 1px;
       overflow-y: auto;
       margin-bottom: 20px;
-      cursor: pointer;
 
       &__record {
+        cursor: pointer;
         width: 320px;
         height: 45px;
-        padding: 0 10px;
+        padding: 0 20px;
         margin: 0 auto;
+        margin-top: 1px;
         line-height: 45px;
         display: flex;
         justify-content: space-between;
         position: relative;
-        background: #333333;
+        background: #444444;
+        border-radius: 25px;
+        transition: 0.2s;
+
+        &:hover {
+          background: #666666 !important;
+        }
 
         &--selected {
-          border-radius: 24px;
-          background-color: #555555;
-          margin-top: -1px;
-          padding: 0 34px;
+          border-radius: 25px;
+          background-color: #666666;
+          padding: 0 35px;
         }
       }
     }
@@ -114,6 +120,7 @@
 
     &__text {
       font-size: 16px;
+      color:#ffffff;
     }
 
     &__blur {
@@ -197,10 +204,12 @@
             'ar-icon--rec': isRecording,
             'ar-icon--pulse': isRecording && volume > 0.02
           }"
+          :title="isRecording ? 'Pause recording' : 'Start recording'"
           @click.native="toggleRecorder"/>
         <icon-button
           class="ar-icon ar-icon__sm ar-recorder__stop"
           name="stop"
+          title="Stop recording"
           @click.native="stopRecorder"/>
       </div>
 
@@ -218,6 +227,7 @@
             <div
               class="ar__rm"
               v-if="record.id === selected.id"
+              title="Remove recording"
               @click="removeRecord(idx)">&times;</div>
             <div class="ar__text">Record {{idx + 1}}</div>
             <div class="ar__text">{{record.duration}}</div>
@@ -226,7 +236,8 @@
               v-if="record.id === selected.id && showDownloadButton"
               class="ar__downloader"
               :record="record"
-              :filename="filename"/>
+              :filename="filename"  
+              title="Save recording"/>
 
             <uploader
               v-if="record.id === selected.id && showUploadButton"
@@ -234,7 +245,8 @@
               :record="record"
               :filename="filename"
               :headers="headers"
-              :upload-url="uploadUrl"/>
+              :upload-url="uploadUrl"
+              title="Upload recording"/>
         </div>
       </div>
 

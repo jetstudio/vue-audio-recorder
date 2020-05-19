@@ -44,7 +44,7 @@
   export default {
     data () {
       return {
-        volume: 0.8
+        volume: 100
       }
     },
     components: {
